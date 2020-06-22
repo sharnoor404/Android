@@ -1,0 +1,48 @@
+{
+  "project_info": {
+    "project_number": "852077493643",
+    "firebase_url": "https://helping-paws-aa2ac.firebaseio.com",
+    "project_id": "helping-paws-aa2ac",
+    "storage_bucket": "helping-paws-aa2ac.appspot.com"
+  },
+  "client": [
+    {
+      "client_info": {
+        "mobilesdk_app_id": "1:852077493643:android:ced27b6bed187f3bb3038e",
+        "android_client_info": {
+          "package_name": "com.example.helpingpaws"
+        }
+      },
+      "oauth_client": [
+        {
+          "client_id": "852077493643-3gprnaprnubjv7fdbch9925g1agadiph.apps.googleusercontent.com",
+          "client_type": 1,
+          "android_info": {
+            "package_name": "com.example.helpingpaws",
+            "certificate_hash": "903a3baedd791b137d60b83da0e5ffa016e278fd"
+          }
+        },
+        {
+          "client_id": "852077493643-ecj2sc3i7if575b48gbk1ttljcockhoj.apps.googleusercontent.com",
+          "client_type": 3
+        }
+      ],
+      "api_key": [
+        {
+          "current_key": "AIzaSyDuxwRyIb1UHpdMuu6QjNax2KoCqaqBYNY"
+        }
+      ],
+      "services": {
+        "appinvite_service": {
+          "other_platform_oauth_client": [
+            {
+              "client_id": "852077493643-ecj2sc3i7if575b48gbk1ttljcockhoj.apps.googleusercontent.com",
+              "client_type": 3
+            }
+          ]
+        }
+      }
+    }
+  ],
+  "configuration_version": "1"
+}
