@@ -1,0 +1,5 @@
+Issues and work remaining:
+-button color
+-text color
+-testing of database
+-checking frontend on device
