@@ -51,6 +51,9 @@ dependencies {
     implementation 'com.squareup.picasso:picasso:2.5.2'
     implementation 'com.firebaseui:firebase-ui-database:1.2.0'
 
+    //to resolve the inflate exception error
+   // implementation 'com.github.jd-alexander:android-flat-button:v1.1'
+
 
 }
 
