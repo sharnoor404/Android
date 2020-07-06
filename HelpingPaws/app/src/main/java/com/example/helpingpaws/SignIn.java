@@ -3,12 +3,14 @@ package com.example.helpingpaws;
 import androidx.appcompat.app.AppCompatActivity;
 
 import android.app.ProgressDialog;
+import android.content.Intent;
 import android.os.Bundle;
 import android.view.View;
 import android.widget.Button;
 import android.widget.EditText;
 import android.widget.Toast;
 
+import com.example.helpingpaws.Common.Common;
 import com.example.helpingpaws.Model.User;
 import com.google.firebase.database.DataSnapshot;
 import com.google.firebase.database.DatabaseError;
@@ -57,7 +59,10 @@ public class SignIn extends AppCompatActivity {
                             User user=dataSnapshot.child(edtPhone.getText().toString()).getValue(User.class);
                             if(user.getPassword().equals(edtPassword.getText().toString()))
                             {
-                                Toast.makeText(SignIn.this, "Sign In Successful!", Toast.LENGTH_SHORT).show();
+                                Intent homeIntent=new Intent(SignIn.this,Home.class);
+                                Common.currentUser=user;
+                                startActivity(homeIntent);
+                                finish();
                             }
                             else
                             {
