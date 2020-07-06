@@ -6,6 +6,7 @@
     android:layout_width="match_parent"
     android:layout_height="match_parent"
     android:fitsSystemWindows="true"
+    android:background="@drawable/background"
     tools:openDrawer="start">
 
     <com.google.android.material.navigation.NavigationView
@@ -15,6 +16,11 @@
         android:layout_gravity="start"
         android:fitsSystemWindows="true"
         app:headerLayout="@layout/nav_header_home"
+
+        android:background="@color/overlayBackground"
+        app:itemTextColor="@android:color/white"
+        app:itemIconTint="@android:color/white"
+
         app:menu="@menu/activity_home_drawer" />
 
     <include
