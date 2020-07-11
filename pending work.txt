@@ -3,3 +3,4 @@ Issues and work remaining:
 -text color
 -testing of database
 -checking frontend on device
+-unwanted text displayed on menu screen.
