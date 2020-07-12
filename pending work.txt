@@ -4,3 +4,7 @@ Issues and work remaining:
 -testing of database
 -checking frontend on device
 -unwanted text displayed on menu screen.
+
+index:
+-replace pet by food
+-food_tem->menu_options
