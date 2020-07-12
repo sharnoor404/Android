@@ -7,4 +7,4 @@ Issues and work remaining:
 
 index:
 -replace pet by food
--food_tem->menu_options
+-food_item->pet_options
