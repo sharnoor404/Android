@@ -5,7 +5,10 @@ import androidx.recyclerview.widget.LinearLayoutManager;
 import androidx.recyclerview.widget.RecyclerView;
 
 import android.os.Bundle;
+import android.view.View;
+import android.widget.Toast;
 
+import com.example.helpingpaws.Interface.ItemClickListener;
 import com.example.helpingpaws.Model.Pets;
 import com.example.helpingpaws.ViewHolder.PetViewHolder;
 import com.firebase.ui.database.FirebaseRecyclerAdapter;
@@ -57,7 +60,18 @@ public class PetList extends AppCompatActivity {
                 petViewHolder.pet_name.setText(pets.getName());
                 Picasso.with(getBaseContext()).load(pets.getImage())
                         .into(petViewHolder.pet_image);
+
+                final Pets local=pets;
+                petViewHolder.setItemClickListener(new ItemClickListener() {
+                    @Override
+                    public void onClick(View view, int position, boolean isLongClick) {
+                        Toast.makeText(PetList.this, ""+local.getName(), Toast.LENGTH_SHORT).show();
+                    }
+                });
             }
         };
+
+        //set adapter
+        recyclerView.setAdapter(adapter);
     }
 }
