@@ -29,5 +29,8 @@ public class PetList extends AppCompatActivity {
         recyclerView.setHasFixedSize(true);
         layoutManager=new LinearLayoutManager(this);
         recyclerView.setLayoutManager(layoutManager);
+
+        //Get intent here
+        
     }
 }
