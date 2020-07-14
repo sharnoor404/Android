@@ -56,7 +56,7 @@ public class PetList extends AppCompatActivity {
         adapter=new FirebaseRecyclerAdapter<Pet, PetViewHolder>(Pet.class,
                 R.layout.pet_option,
                 PetViewHolder.class,
-                petList.orderByChild("PetId").equalTo(categoryId)) {
+                petList.orderByChild("PetID").equalTo(categoryId)) {
             @Override
             protected void populateViewHolder(PetViewHolder petViewHolder, Pet pets, int i) {
                 petViewHolder.pet_name.setText(pets.getName());
