@@ -21,7 +21,7 @@
 
         <TextView
             android:id="@+id/pet_name"
-            android:text="Name of Pet"
+            android:text="Name of pet"
             android:textColor="@android:color/white"
             android:background="#4f0e0d0e"
             android:textSize="20sp"

@@ -9,7 +9,7 @@ import android.view.View;
 import android.widget.Toast;
 
 import com.example.helpingpaws.Interface.ItemClickListener;
-import com.example.helpingpaws.Model.Pets;
+import com.example.helpingpaws.Model.Pet;
 import com.example.helpingpaws.ViewHolder.PetViewHolder;
 import com.firebase.ui.database.FirebaseRecyclerAdapter;
 import com.google.firebase.database.DatabaseReference;
@@ -24,7 +24,7 @@ public class PetList extends AppCompatActivity {
     FirebaseDatabase database;
     DatabaseReference petList;
     String categoryId="";
-    FirebaseRecyclerAdapter<Pets, PetViewHolder> adapter;
+    FirebaseRecyclerAdapter<Pet, PetViewHolder> adapter;
 
     @Override
     protected void onCreate(Bundle savedInstanceState) {
@@ -34,7 +34,8 @@ public class PetList extends AppCompatActivity {
         //firebase
         database=FirebaseDatabase.getInstance();
         petList=database.getReference("Pets");
-        recyclerView=(RecyclerView)findViewById(R.id.recycler_pets);
+
+        recyclerView=(RecyclerView)findViewById(R.id.recycler_pet);
         recyclerView.setHasFixedSize(true);
         layoutManager=new LinearLayoutManager(this);
         recyclerView.setLayoutManager(layoutManager);
@@ -52,16 +53,17 @@ public class PetList extends AppCompatActivity {
     }
 
     private void loadListPet(String categoryId) {
-        adapter=new FirebaseRecyclerAdapter<Pets, PetViewHolder>(Pets.class,
+        adapter=new FirebaseRecyclerAdapter<Pet, PetViewHolder>(Pet.class,
                 R.layout.pet_option,
-                PetViewHolder.class, petList.orderByChild("MenuId").equalTo(categoryId)) {
+                PetViewHolder.class,
+                petList.orderByChild("PetId").equalTo(categoryId)) {
             @Override
-            protected void populateViewHolder(PetViewHolder petViewHolder, Pets pets, int i) {
+            protected void populateViewHolder(PetViewHolder petViewHolder, Pet pets, int i) {
                 petViewHolder.pet_name.setText(pets.getName());
                 Picasso.with(getBaseContext()).load(pets.getImage())
                         .into(petViewHolder.pet_image);
 
-                final Pets local=pets;
+                final Pet local=pets;
                 petViewHolder.setItemClickListener(new ItemClickListener() {
                     @Override
                     public void onClick(View view, int position, boolean isLongClick) {

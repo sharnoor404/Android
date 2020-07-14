@@ -1,12 +1,12 @@
 package com.example.helpingpaws.Model;
 
-public class Pets {
+public class Pet {
     private String Name, Image, Description, PetID;
 
-    public Pets()
+    public Pet()
     {
     }
-    public Pets(String name, String image, String description, String petID)
+    public Pet(String name, String image, String description, String petID)
     {
         Name=name;
         Image=image;
