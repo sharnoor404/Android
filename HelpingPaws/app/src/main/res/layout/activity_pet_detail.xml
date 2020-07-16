@@ -1,0 +1,28 @@
+<?xml version="1.0" encoding="utf-8"?>
+<androidx.support.design.widget.CoordinatorLayout xmlns:android="http://schemas.android.com/apk/res/android"
+    xmlns:app="http://schemas.android.com/apk/res-auto"
+    xmlns:tools="http://schemas.android.com/tools"
+    android:layout_width="match_parent"
+    android:layout_height="match_parent"
+    tools:context=".PetDetail">
+
+    <androidx.support.design.widget.AppBarLayout
+        android:id="@+id/app_bar_layout"
+        android:layout_width="match_parent"
+        android:layout_height="wrap_content"
+        android:theme="@style/ThemeOverlay.AppCompst.Dark.ActionBar"
+        android:fitsSstemWindow="true"
+        ></androidx.support.design.widget.AppBarLayout>
+
+    <androidx.support.design.widget.CollapsingToolbarLayout
+        android:id="@+id/collapsing"
+        android:layout_width="match_parent"
+        android:layout_height="350dp"
+        android:fitsSystemWindows="scroll|exitUntilCollapsed"
+        app:contentScrim="#0e0d0e"
+        app:expandedTitleTextApprearance="android:color/transparent"
+        ></androidx.support.design.widget.CollapsingToolbarLayout>
+
+</androidx.support.design.widget.CoordinatorLayout>
+
+
