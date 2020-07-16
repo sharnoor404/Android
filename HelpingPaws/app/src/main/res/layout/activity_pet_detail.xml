@@ -11,7 +11,7 @@
         android:layout_width="match_parent"
         android:layout_height="wrap_content"
         android:theme="@style/ThemeOverlay.AppCompat.Dark.ActionBar"
-        android:fitsSstemWindow="true"
+        android:fitsSystemWindows="true"
         >
 
             <com.google.android.material.appbar.CollapsingToolbarLayout
@@ -21,8 +21,7 @@
                 android:fitsSystemWindows="true"
                 app:layout_scrollFlags="scroll|exitUntilCollapsed"
                 app:contentScrim="#0e0d0e"
-                app:expandedTitleTextApprearance="android:color/transparent"
-                >
+                app:expandedTitleTextAppearance="@android:color/transparent">
 
                     <ImageView
                         android:id="@+id/img_pet"
@@ -62,7 +61,7 @@
         android:clipToPadding="false"
         android:layout_width="match_parent"
         android:layout_height="match_parent"
-        app:layout_behaviour="com.google.android.material.appbar.AppBarLayout$ScrollingViewBehavior"
+        app:layout_behavior="com.google.android.material.appbar.AppBarLayout$ScrollingViewBehavior"
         >
         <LinearLayout
             android:orientation="vertical"
@@ -122,10 +121,10 @@
             android:layout_marginTop="8dp"
             android:layout_marginLeft="8dp"
             android:layout_marginBottom="18dp"
-            app:TextSize="8sp"
-            app:backgroundColor="@color/colorAccent"
-            app:initial_number="1"
-            app:final_number="20"
+            app:textSize="8sp"
+            app:backGroundColor="@color/colorAccent"
+            app:initialNumber="1"
+            app:finalNumber="20"
             />
                  </LinearLayout>
 
