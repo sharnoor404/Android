@@ -12,7 +12,7 @@
         android:layout_height="wrap_content"
         android:theme="@style/ThemeOverlay.AppCompst.Dark.ActionBar"
         android:fitsSstemWindow="true"
-        ></androidx.support.design.widget.AppBarLayout>
+        >
 
     <androidx.support.design.widget.CollapsingToolbarLayout
         android:id="@+id/collapsing"
@@ -22,6 +22,25 @@
         app:contentScrim="#0e0d0e"
         app:expandedTitleTextApprearance="android:color/transparent"
         ></androidx.support.design.widget.CollapsingToolbarLayout>
+
+    <ImageView
+        android:id="@+id/img_pet"
+        android:layout_width="match_parent"
+        android:layout_height="match_parent"
+        android:contentDescription="@null"
+        android:scaleType="centerCrop"
+        app:layout_collapseMode="parallax"
+        />
+
+    <android.support.v7.widget.Toolbar
+        android:id="@+id/toolbar"
+        android:title="Pet Name"
+        android:layout_width="match_parent"
+        android:layout_height="attr/actionBarSize"
+        app:popupTheme="@style/ThemeOverlay.AppCompat.Light"
+
+        />
+    </androidx.support.design.widget.AppBarLayout>
 
 </androidx.support.design.widget.CoordinatorLayout>
 
