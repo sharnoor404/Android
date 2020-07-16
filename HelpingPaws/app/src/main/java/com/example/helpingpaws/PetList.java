@@ -4,6 +4,7 @@ import androidx.appcompat.app.AppCompatActivity;
 import androidx.recyclerview.widget.LinearLayoutManager;
 import androidx.recyclerview.widget.RecyclerView;
 
+import android.content.Intent;
 import android.os.Bundle;
 import android.view.View;
 import android.widget.Toast;
@@ -64,12 +65,26 @@ public class PetList extends AppCompatActivity {
                         .into(petViewHolder.pet_image);
 
                 final Pet local=pets;
+
                 petViewHolder.setItemClickListener(new ItemClickListener() {
                     @Override
                     public void onClick(View view, int position, boolean isLongClick) {
-                        Toast.makeText(PetList.this, ""+local.getName(), Toast.LENGTH_SHORT).show();
+                        //Start new activity
+                        Intent petDetail=new Intent(PetList.this,PetDetail.class);
+                        petDetail.putExtra("PetId",adapter.getRef(position).getKey());
+                        startActivity(petDetail);
+
                     }
                 });
+
+
+
+//                petViewHolder.setItemClickListener(new ItemClickListener() {
+//                    @Override
+//                    public void onClick(View view, int position, boolean isLongClick) {
+//                        Toast.makeText(PetList.this, ""+local.getName(), Toast.LENGTH_SHORT).show();
+//                    }
+//                });
             }
         };
 
