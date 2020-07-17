@@ -47,13 +47,13 @@
         android:id="@+id/btnCart"
         android:src="@drawable/ic_shopping_cart_black_24dp"
         android:backgroundTint="@android:color/white"
-        android:layout_width="wrap_content"
-        android:layout_height="wrap_content"
         app:elevation="6dp"
         app:pressedTranslationZ="12dp"
         app:layout_anchor="@id/app_bar_layout"
         app:layout_anchorGravity="bottom|right|end"
         app:useCompatPadding="true"
+        android:layout_width="wrap_content"
+        android:layout_height="wrap_content"
         ></com.google.android.material.floatingactionbutton.FloatingActionButton>
 
     <androidx.core.widget.NestedScrollView
@@ -91,28 +91,28 @@
                     android:layout_width="wrap_content"
                     android:layout_height="wrap_content"></TextView>
 
-        <LinearLayout
-            android:id="@+id/layout_price"
-            android:orientation="horizontal"
-            android:layout_width="match_parent"
-            android:layout_height="wrap_content"></LinearLayout>
+<!--        <LinearLayout-->
+<!--            android:id="@+id/layout_price"-->
+<!--            android:orientation="horizontal"-->
+<!--            android:layout_width="match_parent"-->
+<!--            android:layout_height="wrap_content"></LinearLayout>-->
 
-            <ImageView
-                android:src="@drawable/ic_attach_money_black_24dp"
-                android:layout_weight='1'
-                android:layout_width="0dp"
-                android:layout_height="wrap_content"
-                />
+<!--            <ImageView-->
+<!--                android:src="@drawable/ic_attach_money_black_24dp"-->
+<!--                android:layout_weight='1'-->
+<!--                android:layout_width="0dp"-->
+<!--                android:layout_height="wrap_content"-->
+<!--                />-->
 
-            <TextView
-                android:id="@+id/pet_price"
-                android:text="1,000"
-                android:textColor="@color/colorPrimary"
-                android:textSize="18sp"
-                android:textStyle="bold"
-                android:layout_width="0dp"
-                android:layout_weight="9"
-                android:layout_height="wrap_content"/>
+<!--            <TextView-->
+<!--                android:id="@+id/pet_price"-->
+<!--                android:text="1,000"-->
+<!--                android:textColor="@color/colorPrimary"-->
+<!--                android:textSize="18sp"-->
+<!--                android:textStyle="bold"-->
+<!--                android:layout_width="0dp"-->
+<!--                android:layout_weight="9"-->
+<!--                android:layout_height="wrap_content"/>-->
 
         <com.cepeheuen.elegantnumberbutton.view.ElegantNumberButton
             android:layout_width="100dp"
@@ -128,7 +128,7 @@
             />
                  </LinearLayout>
 
-            </androidx.cardview.widget.CardView>
+        </androidx.cardview.widget.CardView>
             <androidx.cardview.widget.CardView
                 app:cardElevation="5dp"
                 app:cardUseCompatPadding="true"

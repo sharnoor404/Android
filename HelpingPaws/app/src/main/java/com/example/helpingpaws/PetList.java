@@ -57,6 +57,7 @@ public class PetList extends AppCompatActivity {
         adapter=new FirebaseRecyclerAdapter<Pet, PetViewHolder>(Pet.class,
                 R.layout.pet_option,
                 PetViewHolder.class,
+                //changed from petID to petId
                 petList.orderByChild("PetID").equalTo(categoryId)) {
             @Override
             protected void populateViewHolder(PetViewHolder petViewHolder, Pet pets, int i) {
@@ -66,25 +67,16 @@ public class PetList extends AppCompatActivity {
 
                 final Pet local=pets;
 
+
                 petViewHolder.setItemClickListener(new ItemClickListener() {
                     @Override
                     public void onClick(View view, int position, boolean isLongClick) {
                         //Start new activity
                         Intent petDetail=new Intent(PetList.this,PetDetail.class);
-                        petDetail.putExtra("PetId",adapter.getRef(position).getKey());
+                        petDetail.putExtra("PetID",adapter.getRef(position).getKey());
                         startActivity(petDetail);
-
                     }
                 });
-
-
-
-//                petViewHolder.setItemClickListener(new ItemClickListener() {
-//                    @Override
-//                    public void onClick(View view, int position, boolean isLongClick) {
-//                        Toast.makeText(PetList.this, ""+local.getName(), Toast.LENGTH_SHORT).show();
-//                    }
-//                });
             }
         };
 

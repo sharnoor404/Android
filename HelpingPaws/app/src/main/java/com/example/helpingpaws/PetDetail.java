@@ -31,7 +31,6 @@ public class PetDetail extends AppCompatActivity {
     FirebaseDatabase database;
     DatabaseReference pets;
 
-
     @Override
     protected void onCreate(Bundle savedInstanceState) {
         super.onCreate(savedInstanceState);
@@ -47,7 +46,7 @@ public class PetDetail extends AppCompatActivity {
 
         pet_description=(TextView)findViewById(R.id.pet_description);
         pet_name=(TextView)findViewById(R.id.pet_name);
-        pet_price=(TextView)findViewById(R.id.pet_price);
+       // pet_price=(TextView)findViewById(R.id.pet_price);
 
         pet_image=(ImageView)findViewById(R.id.img_pet);
 
@@ -57,7 +56,7 @@ public class PetDetail extends AppCompatActivity {
 
         //Get Pet Id from Intent
         if(getIntent()!=null)
-            petId=getIntent().getStringExtra("PetId");
+            petId=getIntent().getStringExtra("PetID");
         if(!petId.isEmpty())
         {
             getDetailPet(petId);
@@ -75,7 +74,7 @@ public class PetDetail extends AppCompatActivity {
                 Picasso.with(getBaseContext()).load(pet.getImage())
                         .into(pet_image);
                 collapsingToolbarLayout.setTitle(pet.getName());
-                pet_price.setText(pet.getPrice());
+                //pet_price.setText(pet.getPrice());
                 pet_name.setText(pet.getName());
 
                 pet_description.setText(pet.getDescription());
