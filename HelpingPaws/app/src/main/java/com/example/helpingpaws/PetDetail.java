@@ -18,7 +18,7 @@ import com.google.firebase.database.FirebaseDatabase;
 import com.google.firebase.database.ValueEventListener;
 import com.squareup.picasso.Picasso;
 
-public class PetDetail extends AppCompatActivity {
+public class PetDetail<ElegantNumberButton> extends AppCompatActivity {
 
     TextView pet_name,pet_price,pet_description;
     ImageView pet_image;
