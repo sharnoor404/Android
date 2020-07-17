@@ -7,7 +7,7 @@ import android.os.Bundle;
 import android.widget.ImageView;
 import android.widget.TextView;
 
-import com.cepheuen.elegantnumberbutton.view.ElegantNumberButton;
+//import com.cepheuen.elegantnumberbutton.view.ElegantNumberButton;
 import com.example.helpingpaws.Model.Pet;
 import com.google.android.material.appbar.CollapsingToolbarLayout;
 import com.google.android.material.floatingactionbutton.FloatingActionButton;
@@ -20,7 +20,7 @@ import com.squareup.picasso.Picasso;
 
 public class PetDetail<ElegantNumberButton> extends AppCompatActivity {
 
-    TextView pet_name,pet_price,pet_description;
+    TextView pet_name,pet_description;
     ImageView pet_image;
     CollapsingToolbarLayout collapsingToolbarLayout;
     FloatingActionButton btnCart;
@@ -57,6 +57,7 @@ public class PetDetail<ElegantNumberButton> extends AppCompatActivity {
         //Get Pet Id from Intent
         if(getIntent()!=null)
             petId=getIntent().getStringExtra("PetID");
+        assert petId != null;
         if(!petId.isEmpty())
         {
             getDetailPet(petId);
@@ -71,6 +72,7 @@ public class PetDetail<ElegantNumberButton> extends AppCompatActivity {
             public void onDataChange(@NonNull DataSnapshot snapshot) {
                 Pet pet=snapshot.getValue(Pet.class);
                 //set Image
+                assert pet != null;
                 Picasso.with(getBaseContext()).load(pet.getImage())
                         .into(pet_image);
                 collapsingToolbarLayout.setTitle(pet.getName());
