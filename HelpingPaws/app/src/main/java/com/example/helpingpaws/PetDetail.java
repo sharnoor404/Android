@@ -24,7 +24,7 @@ public class PetDetail<ElegantNumberButton> extends AppCompatActivity {
     ImageView pet_image;
     CollapsingToolbarLayout collapsingToolbarLayout;
     FloatingActionButton btnCart;
-    ElegantNumberButton numberButton;
+    //ElegantNumberButton numberButton;
 
     String petId="";
 
@@ -41,7 +41,7 @@ public class PetDetail<ElegantNumberButton> extends AppCompatActivity {
         pets=database.getReference("Pets");
 
         //Init view
-        numberButton=(ElegantNumberButton)findViewById(R.id.number_button);
+       // numberButton=(ElegantNumberButton)findViewById(R.id.number_button);
         btnCart=(FloatingActionButton)findViewById(R.id.btnCart);
 
         pet_description=(TextView)findViewById(R.id.pet_description);
