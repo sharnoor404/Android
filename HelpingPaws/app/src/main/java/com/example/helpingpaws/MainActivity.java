@@ -20,12 +20,12 @@ public class MainActivity extends AppCompatActivity {
         btnSignIn=(Button)findViewById(R.id.btnSignIn);
         btnSignUp=(Button)findViewById(R.id.btnSignUp);
 
-        btnSignIn.setOnClickListener(new View.OnClickListener() {
-            @Override
-            public void onClick(View v) {
-
-            }
-        });
+//        btnSignIn.setOnClickListener(new View.OnClickListener() {
+//            @Override
+//            public void onClick(View v) {
+//
+//            }
+//        });
 
         btnSignUp.setOnClickListener(new View.OnClickListener() {
             @Override
