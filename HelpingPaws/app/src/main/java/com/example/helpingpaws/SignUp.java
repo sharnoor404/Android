@@ -52,7 +52,7 @@ public class SignUp extends AppCompatActivity {
                         if(dataSnapshot.child(edtPhone.getText().toString()).exists())
                         {
                             mDialog.dismiss();
-                            Toast.makeText(SignUp.this, "Phone number already registered. Please Sign In to continue", Toast.LENGTH_SHORT).show();
+                            Toast.makeText(SignUp.this, "Phone number registered. Please Sign In to continue", Toast.LENGTH_SHORT).show();
                         }
                         else
                         {

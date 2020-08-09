@@ -51,7 +51,7 @@ public class SignIn extends AppCompatActivity {
                     @Override
                     public void onDataChange(DataSnapshot dataSnapshot) {
 
-                        //Check if user does not exist in the database
+                        //Check if user exists in the database
                         if(dataSnapshot.child(edtPhone.getText().toString()).exists())
                         {
                             //Get user information
