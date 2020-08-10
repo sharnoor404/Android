@@ -11,16 +11,16 @@
             android:title="Menu" />
 
         <item
+            android:id="@+id/nav_orders"
+            android:icon="@drawable/ic_favorite_black_24dp"
+            android:iconTint="@android:color/white"
+            android:title="Adopt" />
+
+        <item
             android:id="@+id/nav_cart"
             android:icon="@drawable/ic_phone_black_24dp"
             android:iconTint="@android:color/white"
             android:title="Contact Information" />
-
-        <item
-            android:id="@+id/nav_orders"
-            android:icon="@drawable/ic_pets_black_24dp"
-            android:iconTint="@android:color/white"
-            android:title="Orders" />
 
         <item
             android:id="@+id/nav_log_out"
