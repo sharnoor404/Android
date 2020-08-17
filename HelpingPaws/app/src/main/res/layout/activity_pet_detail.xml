@@ -46,7 +46,7 @@
 
     <com.google.android.material.floatingactionbutton.FloatingActionButton
         android:id="@+id/btnCart"
-        android:src="@drawable/ic_shopping_cart_black_24dp"
+        android:src="@drawable/ic_pets_black_24dp"
         android:backgroundTint="@android:color/white"
         app:elevation="6dp"
         app:pressedTranslationZ="12dp"
@@ -99,11 +99,23 @@
                                 android:layout_width="match_parent"
                                 android:layout_height="wrap_content">
 
-                                <ImageView
-                                    android:src="@drawable/ic_attach_money_black_24dp"
-                                    android:layout_weight='1'
+                                <TextView
+                                    android:id="@+id/pet_fee"
+                                    android:text="Adoption Fee:"
+                                    android:padding="12dp"
+                                    android:textColor="@color/colorPrimary"
+                                    android:textSize="18sp"
+                                    android:textStyle="bold"
                                     android:layout_width="0dp"
-                                    android:layout_height="wrap_content" />
+                                    android:layout_weight="9"
+                                    android:layout_height="wrap_content"/>
+
+                                <ImageView
+                                    android:layout_width="0dp"
+                                    android:layout_height="wrap_content"
+                                    android:layout_weight='1'
+                                    android:paddingTop="12dp"
+                                    android:src="@drawable/ic_attach_money_black_24dp" />
 
                                 <TextView
                                     android:id="@+id/pet_price"
@@ -116,20 +128,6 @@
                                     android:layout_height="wrap_content"/>
 
                             </LinearLayout>
-
-
-<!--                    <com.cepeheuen.elegantnumberbutton.view.ElegantNumberButton-->
-<!--                        android:layout_width="100dp"-->
-<!--                        android:layout_height="30dp"-->
-<!--                        android:id="@+id/number_button"-->
-<!--                        android:layout_marginTop="8dp"-->
-<!--                        android:layout_marginLeft="8dp"-->
-<!--                        android:layout_marginBottom="18dp"-->
-<!--                        app:textSize="8sp"-->
-<!--                        app:backGroundColor="@color/colorAccent"-->
-<!--                        app:initialNumber="1"-->
-<!--                        app:finalNumber="20"-->
-<!--                        />-->
 
 
                 </LinearLayout>

@@ -66,7 +66,6 @@ public class PetList extends AppCompatActivity {
 
                 final Pet local=pets;
 
-
                 petViewHolder.setItemClickListener(new ItemClickListener() {
                     @Override
                     public void onClick(View view, int position, boolean isLongClick) {
