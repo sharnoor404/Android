@@ -50,7 +50,9 @@ public class Home extends AppCompatActivity {
         setContentView(R.layout.activity_home);
 
         Toolbar toolbar = findViewById(R.id.toolbar);
+        //set toolbar title
         toolbar.setTitle("Menu");
+
         setSupportActionBar(toolbar);
 
 
@@ -70,8 +72,6 @@ public class Home extends AppCompatActivity {
         });
         DrawerLayout drawer = findViewById(R.id.drawer_layout);
         NavigationView navigationView = findViewById(R.id.nav_view);
-        // Passing each menu ID as a set of Ids because each
-        // menu should be considered as top level destinations.
         mAppBarConfiguration = new AppBarConfiguration.Builder(
                 R.id.nav_home, R.id.nav_gallery, R.id.nav_slideshow)
                 .setDrawerLayout(drawer)
@@ -96,6 +96,7 @@ public class Home extends AppCompatActivity {
 
     }
 
+    //Function to load menu
     private void loadMenu() {
         adapter=new FirebaseRecyclerAdapter<Category, MenuViewHolder>(Category.class,R.layout.menu_item,MenuViewHolder.class,category) {
             @Override
