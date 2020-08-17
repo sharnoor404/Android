@@ -1,16 +1,17 @@
 package com.example.helpingpaws.Model;
 
 public class Pet {
-    private String Name, Image, Description, PetID;
+    private String Name, Image, Description, Price, PetID;
 
     public Pet()
     {
     }
-    public Pet(String name, String image, String description, String petID)
+    public Pet(String name, String image, String description, String petID, String price)
     {
         Name=name;
         Image=image;
         Description=description;
+        Price=price;
         PetID=petID;
     }
 
@@ -25,6 +26,8 @@ public class Pet {
     public String getName() {
         return Name;
     }
+
+    public String getPrice() { return Price; }
 
     public String getPetID() {
         return PetID;
@@ -41,6 +44,8 @@ public class Pet {
     public void setName(String name) {
         Name = name;
     }
+
+    public void setPrice(String price) { Price=price; }
 
     public void setPetID(String petID) {
         PetID = petID;

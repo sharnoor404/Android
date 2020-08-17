@@ -20,11 +20,10 @@ import com.squareup.picasso.Picasso;
 
 public class PetDetail<ElegantNumberButton> extends AppCompatActivity {
 
-    TextView pet_name,pet_description;
+    TextView pet_name,pet_description,pet_price;
     ImageView pet_image;
     CollapsingToolbarLayout collapsingToolbarLayout;
-    FloatingActionButton btnCart;
-    //ElegantNumberButton numberButton;
+    FloatingActionButton btnadopt;
 
     String petId="";
 
@@ -41,12 +40,11 @@ public class PetDetail<ElegantNumberButton> extends AppCompatActivity {
         pets=database.getReference("Pets");
 
         //Init view
-       // numberButton=(ElegantNumberButton)findViewById(R.id.number_button);
-        btnCart=(FloatingActionButton)findViewById(R.id.btnCart);
+        btnadopt=(FloatingActionButton)findViewById(R.id.btnadopt);
 
         pet_description=(TextView)findViewById(R.id.pet_description);
         pet_name=(TextView)findViewById(R.id.pet_name);
-       // pet_price=(TextView)findViewById(R.id.pet_price);
+        pet_price=(TextView)findViewById(R.id.pet_price);
 
         pet_image=(ImageView)findViewById(R.id.img_pet);
 
@@ -76,7 +74,7 @@ public class PetDetail<ElegantNumberButton> extends AppCompatActivity {
                 Picasso.with(getBaseContext()).load(pet.getImage())
                         .into(pet_image);
                 collapsingToolbarLayout.setTitle(pet.getName());
-                //pet_price.setText(pet.getPrice());
+                pet_price.setText(pet.getPrice());
                 pet_name.setText(pet.getName());
 
                 pet_description.setText(pet.getDescription());
